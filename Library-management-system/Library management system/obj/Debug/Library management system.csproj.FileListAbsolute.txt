@@ -1,0 +1,11 @@
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\Library management system\bin\Debug\Library management system.exe.config
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\Library management system\obj\Debug\Library management system.csprojResolveAssemblyReference.cache
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\Library management system\obj\Debug\Library_management_system.Form1.resources
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\Library management system\obj\Debug\Library_management_system.Properties.Resources.resources
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\Library management system\obj\Debug\Library management system.csproj.GenerateResource.Cache
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\Library management system\bin\Debug\Library management system.exe
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\Library management system\bin\Debug\Library management system.pdb
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\Library management system\obj\Debug\Library management system.exe
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\Library management system\obj\Debug\Library management system.pdb
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\Library management system\obj\Debug\Library_management_system.Login.resources
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\Library management system\obj\Debug\Library_management_system.Main.resources
