@@ -169,12 +169,12 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.ItemSize = new System.Drawing.Size(10, 60);
+            this.tabControl1.ItemSize = new System.Drawing.Size(10, 85);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(783, 374);
+            this.tabControl1.Size = new System.Drawing.Size(813, 374);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl1_DrawItem);
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
@@ -187,10 +187,10 @@
             this.tabPage1.Controls.Add(this.groupBox4);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tabPage1.Location = new System.Drawing.Point(64, 4);
+            this.tabPage1.Location = new System.Drawing.Point(89, 4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(715, 366);
+            this.tabPage1.Size = new System.Drawing.Size(720, 366);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "个人信息";
             // 
@@ -431,10 +431,10 @@
             this.tabPage2.BackColor = System.Drawing.Color.Transparent;
             this.tabPage2.Controls.Add(this.groupBox12);
             this.tabPage2.Controls.Add(this.groupBox5);
-            this.tabPage2.Location = new System.Drawing.Point(64, 4);
+            this.tabPage2.Location = new System.Drawing.Point(89, 4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(715, 366);
+            this.tabPage2.Size = new System.Drawing.Size(720, 366);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "图书预览";
             // 
@@ -645,12 +645,12 @@
             this.tabPage3.Controls.Add(this.groupBox14);
             this.tabPage3.Controls.Add(this.groupBox13);
             this.tabPage3.Controls.Add(this.groupBox8);
-            this.tabPage3.Location = new System.Drawing.Point(64, 4);
+            this.tabPage3.Location = new System.Drawing.Point(89, 4);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(715, 366);
+            this.tabPage3.Size = new System.Drawing.Size(720, 366);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "登记借阅";
+            this.tabPage3.Text = "注册借阅";
             // 
             // groupBox14
             // 
@@ -682,7 +682,7 @@
             this.tb5_6.Location = new System.Drawing.Point(76, 29);
             this.tb5_6.Name = "tb5_6";
             this.tb5_6.Size = new System.Drawing.Size(139, 21);
-            this.tb5_6.TabIndex = 53;
+            this.tb5_6.TabIndex = 0;
             // 
             // label22
             // 
@@ -698,7 +698,7 @@
             this.tb5_7.Name = "tb5_7";
             this.tb5_7.PasswordChar = '*';
             this.tb5_7.Size = new System.Drawing.Size(139, 21);
-            this.tb5_7.TabIndex = 51;
+            this.tb5_7.TabIndex = 1;
             // 
             // label23
             // 
@@ -714,7 +714,7 @@
             this.注销_5.Location = new System.Drawing.Point(243, 57);
             this.注销_5.Name = "注销_5";
             this.注销_5.Size = new System.Drawing.Size(75, 23);
-            this.注销_5.TabIndex = 45;
+            this.注销_5.TabIndex = 2;
             this.注销_5.Text = "注销";
             this.注销_5.UseVisualStyleBackColor = true;
             this.注销_5.Click += new System.EventHandler(this.注销_5_Click);
@@ -753,7 +753,7 @@
             this.tb5_5.Name = "tb5_5";
             this.tb5_5.PasswordChar = '*';
             this.tb5_5.Size = new System.Drawing.Size(139, 21);
-            this.tb5_5.TabIndex = 53;
+            this.tb5_5.TabIndex = 1;
             // 
             // label21
             // 
@@ -770,7 +770,7 @@
             this.tb5_4.Name = "tb5_4";
             this.tb5_4.PasswordChar = '*';
             this.tb5_4.Size = new System.Drawing.Size(139, 21);
-            this.tb5_4.TabIndex = 51;
+            this.tb5_4.TabIndex = 0;
             // 
             // label15
             // 
@@ -791,7 +791,7 @@
             this.cb5_3.Location = new System.Drawing.Point(76, 211);
             this.cb5_3.Name = "cb5_3";
             this.cb5_3.Size = new System.Drawing.Size(139, 20);
-            this.cb5_3.TabIndex = 49;
+            this.cb5_3.TabIndex = 7;
             // 
             // label20
             // 
@@ -807,7 +807,7 @@
             this.清除_5.Location = new System.Drawing.Point(243, 212);
             this.清除_5.Name = "清除_5";
             this.清除_5.Size = new System.Drawing.Size(75, 23);
-            this.清除_5.TabIndex = 46;
+            this.清除_5.TabIndex = 9;
             this.清除_5.Text = "清除";
             this.清除_5.UseVisualStyleBackColor = true;
             this.清除_5.Click += new System.EventHandler(this.清除_5_Click);
@@ -817,7 +817,7 @@
             this.注册_5.Location = new System.Drawing.Point(243, 183);
             this.注册_5.Name = "注册_5";
             this.注册_5.Size = new System.Drawing.Size(75, 23);
-            this.注册_5.TabIndex = 45;
+            this.注册_5.TabIndex = 8;
             this.注册_5.Text = "注册";
             this.注册_5.UseVisualStyleBackColor = true;
             this.注册_5.Click += new System.EventHandler(this.注册_5_Click);
@@ -831,7 +831,7 @@
             this.cb5_2.Location = new System.Drawing.Point(76, 131);
             this.cb5_2.Name = "cb5_2";
             this.cb5_2.Size = new System.Drawing.Size(139, 20);
-            this.cb5_2.TabIndex = 44;
+            this.cb5_2.TabIndex = 4;
             // 
             // cb5_1
             // 
@@ -843,28 +843,28 @@
             this.cb5_1.Location = new System.Drawing.Point(76, 105);
             this.cb5_1.Name = "cb5_1";
             this.cb5_1.Size = new System.Drawing.Size(139, 20);
-            this.cb5_1.TabIndex = 41;
+            this.cb5_1.TabIndex = 3;
             // 
             // tb5_3
             // 
             this.tb5_3.Location = new System.Drawing.Point(77, 184);
             this.tb5_3.Name = "tb5_3";
             this.tb5_3.Size = new System.Drawing.Size(139, 21);
-            this.tb5_3.TabIndex = 42;
+            this.tb5_3.TabIndex = 6;
             // 
             // tb5_2
             // 
             this.tb5_2.Location = new System.Drawing.Point(76, 157);
             this.tb5_2.Name = "tb5_2";
             this.tb5_2.Size = new System.Drawing.Size(139, 21);
-            this.tb5_2.TabIndex = 43;
+            this.tb5_2.TabIndex = 5;
             // 
             // tb5_1
             // 
             this.tb5_1.Location = new System.Drawing.Point(76, 78);
             this.tb5_1.Name = "tb5_1";
             this.tb5_1.Size = new System.Drawing.Size(139, 21);
-            this.tb5_1.TabIndex = 38;
+            this.tb5_1.TabIndex = 2;
             // 
             // label11
             // 
@@ -934,7 +934,7 @@
             this.注销_3.Location = new System.Drawing.Point(259, 252);
             this.注销_3.Name = "注销_3";
             this.注销_3.Size = new System.Drawing.Size(75, 23);
-            this.注销_3.TabIndex = 30;
+            this.注销_3.TabIndex = 5;
             this.注销_3.Text = "注销";
             this.注销_3.UseVisualStyleBackColor = true;
             this.注销_3.Click += new System.EventHandler(this.注销_3_Click);
@@ -953,7 +953,7 @@
             this.登记_3.Location = new System.Drawing.Point(259, 310);
             this.登记_3.Name = "登记_3";
             this.登记_3.Size = new System.Drawing.Size(75, 23);
-            this.登记_3.TabIndex = 30;
+            this.登记_3.TabIndex = 7;
             this.登记_3.Text = "登记";
             this.登记_3.UseVisualStyleBackColor = true;
             this.登记_3.Click += new System.EventHandler(this.登记_3_Click);
@@ -963,7 +963,7 @@
             this.借阅情况_3.Location = new System.Drawing.Point(259, 18);
             this.借阅情况_3.Name = "借阅情况_3";
             this.借阅情况_3.Size = new System.Drawing.Size(75, 23);
-            this.借阅情况_3.TabIndex = 35;
+            this.借阅情况_3.TabIndex = 3;
             this.借阅情况_3.Text = "借阅情况";
             this.借阅情况_3.UseVisualStyleBackColor = true;
             this.借阅情况_3.Click += new System.EventHandler(this.借阅情况_3_Click);
@@ -973,7 +973,7 @@
             this.tb3_2.Location = new System.Drawing.Point(71, 20);
             this.tb3_2.Name = "tb3_2";
             this.tb3_2.Size = new System.Drawing.Size(160, 21);
-            this.tb3_2.TabIndex = 33;
+            this.tb3_2.TabIndex = 2;
             // 
             // label7
             // 
@@ -998,14 +998,14 @@
             this.tb3_3.Location = new System.Drawing.Point(71, 312);
             this.tb3_3.Name = "tb3_3";
             this.tb3_3.Size = new System.Drawing.Size(160, 21);
-            this.tb3_3.TabIndex = 31;
+            this.tb3_3.TabIndex = 4;
             // 
             // 续借_3
             // 
             this.续借_3.Location = new System.Drawing.Point(259, 281);
             this.续借_3.Name = "续借_3";
             this.续借_3.Size = new System.Drawing.Size(75, 23);
-            this.续借_3.TabIndex = 34;
+            this.续借_3.TabIndex = 6;
             this.续借_3.Text = "续借";
             this.续借_3.UseVisualStyleBackColor = true;
             this.续借_3.Click += new System.EventHandler(this.续借_3_Click);
@@ -1016,10 +1016,10 @@
             this.tabPage4.Controls.Add(this.groupBox11);
             this.tabPage4.Controls.Add(this.groupBox10);
             this.tabPage4.Controls.Add(this.groupBox7);
-            this.tabPage4.Location = new System.Drawing.Point(64, 4);
+            this.tabPage4.Location = new System.Drawing.Point(89, 4);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(715, 366);
+            this.tabPage4.Size = new System.Drawing.Size(720, 366);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "图书管理";
             // 
@@ -1076,7 +1076,7 @@
             this.listBox2.Location = new System.Drawing.Point(20, 77);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(236, 76);
-            this.listBox2.TabIndex = 32;
+            this.listBox2.TabIndex = 5;
             this.listBox2.Click += new System.EventHandler(this.listBox2_Click);
             // 
             // 删除图书类型_4
@@ -1084,7 +1084,7 @@
             this.删除图书类型_4.Location = new System.Drawing.Point(262, 130);
             this.删除图书类型_4.Name = "删除图书类型_4";
             this.删除图书类型_4.Size = new System.Drawing.Size(101, 23);
-            this.删除图书类型_4.TabIndex = 31;
+            this.删除图书类型_4.TabIndex = 4;
             this.删除图书类型_4.Text = "删除图书类型";
             this.删除图书类型_4.UseVisualStyleBackColor = true;
             this.删除图书类型_4.Click += new System.EventHandler(this.删除图书类型_4_Click);
@@ -1094,7 +1094,7 @@
             this.更改图书类型_4.Location = new System.Drawing.Point(262, 104);
             this.更改图书类型_4.Name = "更改图书类型_4";
             this.更改图书类型_4.Size = new System.Drawing.Size(101, 23);
-            this.更改图书类型_4.TabIndex = 30;
+            this.更改图书类型_4.TabIndex = 3;
             this.更改图书类型_4.Text = "更改图书类型";
             this.更改图书类型_4.UseVisualStyleBackColor = true;
             this.更改图书类型_4.Click += new System.EventHandler(this.更改图书类型_4_Click);
@@ -1104,7 +1104,7 @@
             this.添加图书类型_4.Location = new System.Drawing.Point(262, 78);
             this.添加图书类型_4.Name = "添加图书类型_4";
             this.添加图书类型_4.Size = new System.Drawing.Size(101, 23);
-            this.添加图书类型_4.TabIndex = 29;
+            this.添加图书类型_4.TabIndex = 2;
             this.添加图书类型_4.Text = "添加图书类型";
             this.添加图书类型_4.UseVisualStyleBackColor = true;
             this.添加图书类型_4.Click += new System.EventHandler(this.添加图书类型_4_Click);
@@ -1114,14 +1114,14 @@
             this.tb4_2.Location = new System.Drawing.Point(123, 48);
             this.tb4_2.Name = "tb4_2";
             this.tb4_2.Size = new System.Drawing.Size(216, 21);
-            this.tb4_2.TabIndex = 22;
+            this.tb4_2.TabIndex = 1;
             // 
             // tb4_1
             // 
             this.tb4_1.Location = new System.Drawing.Point(123, 20);
             this.tb4_1.Name = "tb4_1";
             this.tb4_1.Size = new System.Drawing.Size(216, 21);
-            this.tb4_1.TabIndex = 24;
+            this.tb4_1.TabIndex = 0;
             // 
             // label42
             // 
@@ -1181,7 +1181,7 @@
             this.清除_4.Location = new System.Drawing.Point(282, 20);
             this.清除_4.Name = "清除_4";
             this.清除_4.Size = new System.Drawing.Size(75, 23);
-            this.清除_4.TabIndex = 39;
+            this.清除_4.TabIndex = 9;
             this.清除_4.Text = "清除";
             this.清除_4.UseVisualStyleBackColor = true;
             this.清除_4.Click += new System.EventHandler(this.清除_4_Click);
@@ -1245,7 +1245,7 @@
             this.删除图书_4.Location = new System.Drawing.Point(282, 157);
             this.删除图书_4.Name = "删除图书_4";
             this.删除图书_4.Size = new System.Drawing.Size(75, 23);
-            this.删除图书_4.TabIndex = 31;
+            this.删除图书_4.TabIndex = 8;
             this.删除图书_4.Text = "删除图书";
             this.删除图书_4.UseVisualStyleBackColor = true;
             this.删除图书_4.Click += new System.EventHandler(this.删除图书_4_Click);
@@ -1255,7 +1255,7 @@
             this.更改图书_4.Location = new System.Drawing.Point(282, 129);
             this.更改图书_4.Name = "更改图书_4";
             this.更改图书_4.Size = new System.Drawing.Size(75, 23);
-            this.更改图书_4.TabIndex = 30;
+            this.更改图书_4.TabIndex = 7;
             this.更改图书_4.Text = "更改图书";
             this.更改图书_4.UseVisualStyleBackColor = true;
             this.更改图书_4.Click += new System.EventHandler(this.更改图书_4_Click);
@@ -1265,7 +1265,7 @@
             this.添加图书_4.Location = new System.Drawing.Point(282, 100);
             this.添加图书_4.Name = "添加图书_4";
             this.添加图书_4.Size = new System.Drawing.Size(75, 23);
-            this.添加图书_4.TabIndex = 29;
+            this.添加图书_4.TabIndex = 6;
             this.添加图书_4.Text = "添加图书";
             this.添加图书_4.UseVisualStyleBackColor = true;
             this.添加图书_4.Click += new System.EventHandler(this.添加图书_4_Click);
@@ -1276,12 +1276,11 @@
             this.cb4_2.FormattingEnabled = true;
             this.cb4_2.Items.AddRange(new object[] {
             "在馆",
-            "借出",
-            "不外借"});
+            "借出"});
             this.cb4_2.Location = new System.Drawing.Point(84, 159);
             this.cb4_2.Name = "cb4_2";
             this.cb4_2.Size = new System.Drawing.Size(172, 20);
-            this.cb4_2.TabIndex = 27;
+            this.cb4_2.TabIndex = 5;
             // 
             // cb4_1
             // 
@@ -1290,35 +1289,35 @@
             this.cb4_1.Location = new System.Drawing.Point(84, 50);
             this.cb4_1.Name = "cb4_1";
             this.cb4_1.Size = new System.Drawing.Size(172, 20);
-            this.cb4_1.TabIndex = 26;
+            this.cb4_1.TabIndex = 1;
             // 
             // tb4_6
             // 
             this.tb4_6.Location = new System.Drawing.Point(84, 133);
             this.tb4_6.Name = "tb4_6";
             this.tb4_6.Size = new System.Drawing.Size(172, 21);
-            this.tb4_6.TabIndex = 22;
+            this.tb4_6.TabIndex = 4;
             // 
             // tb4_5
             // 
             this.tb4_5.Location = new System.Drawing.Point(84, 105);
             this.tb4_5.Name = "tb4_5";
             this.tb4_5.Size = new System.Drawing.Size(172, 21);
-            this.tb4_5.TabIndex = 21;
+            this.tb4_5.TabIndex = 3;
             // 
             // tb4_4
             // 
             this.tb4_4.Location = new System.Drawing.Point(84, 77);
             this.tb4_4.Name = "tb4_4";
             this.tb4_4.Size = new System.Drawing.Size(172, 21);
-            this.tb4_4.TabIndex = 24;
+            this.tb4_4.TabIndex = 2;
             // 
             // tb4_3
             // 
             this.tb4_3.Location = new System.Drawing.Point(84, 22);
             this.tb4_3.Name = "tb4_3";
             this.tb4_3.Size = new System.Drawing.Size(172, 21);
-            this.tb4_3.TabIndex = 20;
+            this.tb4_3.TabIndex = 0;
             // 
             // button5
             // 
@@ -1333,9 +1332,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(807, 397);
+            this.ClientSize = new System.Drawing.Size(833, 397);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "图书管理系统";
             this.Load += new System.EventHandler(this.Main_Load);
             this.tabControl1.ResumeLayout(false);

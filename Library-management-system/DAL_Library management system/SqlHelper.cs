@@ -65,7 +65,7 @@ namespace DAL_Library_management_system
         }
         #endregion
 
-        private static string _strConnection = @"Data Source=.;database=Library management system;Trusted_Connection=SSPI;";
+        private static string _strConnection = @"Password=123456;Persist Security Info=True;User ID=sa;Initial Catalog=Library management system;Data Source=.";
         //private static string _strConnection =File.ReadAllText(@"..\..\ConnectionString.txt");
         //public string strConnection
         //{
@@ -88,7 +88,7 @@ namespace DAL_Library_management_system
             }
             catch
             {
-                throw new Exception("MS SQL Server数据库连接失败！");
+                //throw new Exception("MS SQL Server数据库连接失败！");
             }
         }
 

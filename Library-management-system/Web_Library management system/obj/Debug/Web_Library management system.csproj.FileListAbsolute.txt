@@ -1,0 +1,14 @@
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\Web_Library management system\bin\Web_Library management system.dll.config
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\Web_Library management system\bin\Web_Library management system.dll
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\Web_Library management system\bin\Web_Library management system.pdb
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\Web_Library management system\bin\BLL_Library management system.dll
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\Web_Library management system\bin\commom.dll
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\Web_Library management system\bin\DAL_Library management system.dll
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\Web_Library management system\bin\Model_Library management system.dll
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\Web_Library management system\bin\BLL_Library management system.pdb
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\Web_Library management system\bin\commom.pdb
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\Web_Library management system\bin\DAL_Library management system.pdb
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\Web_Library management system\bin\Model_Library management system.pdb
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\Web_Library management system\obj\Debug\Web_Library management system.csprojResolveAssemblyReference.cache
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\Web_Library management system\obj\Debug\Web_Library management system.dll
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\Web_Library management system\obj\Debug\Web_Library management system.pdb

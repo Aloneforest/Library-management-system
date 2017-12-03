@@ -43,7 +43,7 @@
             this.txtUserPwd.PasswordChar = '*';
             this.txtUserPwd.Size = new System.Drawing.Size(170, 21);
             this.txtUserPwd.TabIndex = 13;
-            this.txtUserPwd.Text = "2";
+            this.txtUserPwd.Text = "123";
             // 
             // txtUserID
             // 
@@ -51,7 +51,7 @@
             this.txtUserID.Name = "txtUserID";
             this.txtUserID.Size = new System.Drawing.Size(170, 21);
             this.txtUserID.TabIndex = 12;
-            this.txtUserID.Text = "6";
+            this.txtUserID.Text = "12";
             // 
             // label2
             // 
@@ -104,7 +104,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnLogin);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "登录";
             this.ResumeLayout(false);
             this.PerformLayout();

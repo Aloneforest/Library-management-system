@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,10 +43,15 @@
     <Compile Include="BookAdmin.cs" />
     <Compile Include="BookTypeAdmin.cs" />
     <Compile Include="BorrowAdmin.cs" />
+    <Compile Include="HttpHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserAdmin.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\commom\commom.csproj">
+      <Project>{ff517392-84bd-4651-af9d-de8126f534da}</Project>
+      <Name>commom</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DAL_Library management system\DAL_Library management system.csproj">
       <Project>{7fbf333d-d263-46be-9936-66f6634822b6}</Project>
       <Name>DAL_Library management system</Name>

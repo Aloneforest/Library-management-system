@@ -31,9 +31,6 @@ namespace Library_management_system
             InitMenu();
         }
 
-        /// <summary>
-        /// 根据用户权限，在frmMain类中初始化菜单。添加InitMenu()方法
-        /// </summary>
         public void InitMenu()
         {
             #region 分配权限
@@ -58,45 +55,32 @@ namespace Library_management_system
             lab1_6.Text = user.Phone;
             #endregion
 
+            #region 初始化界面
             tabControl1.SelectedIndex = 0;
-            dt = BorrowAdmin.Select(user.ID);
+            dt = BorrowAdmin.GetBorrow(user.ID);
             dataGridView1.DataSource = dt;
+            #endregion
         }
 
-        /// <summary>
-        /// 窗口初始化
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void Main_Load(object sender, EventArgs e)
         {
             this.tabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
         }
 
-        /// <summary>
-        /// tabControl变形
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void tabControl1_DrawItem(object sender, DrawItemEventArgs e)
         {
             Graphics g = e.Graphics;
-            Font font = new Font("微软雅黑",10.0f);
+            Font font = new Font("微软雅黑",11.0f);
             SolidBrush brush = new SolidBrush(Color.Black);
             RectangleF tabTextArea = (RectangleF)tabControl1.GetTabRect(e.Index);
-            g.DrawString(tabControl1.Controls[e.Index].Text,font,brush,tabTextArea);
+            g.DrawString("\n  "+tabControl1.Controls[e.Index].Text,font,brush,tabTextArea);
         }
 
-        /// <summary>
-        /// 换页刷新
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (this.tabControl1.SelectedIndex == 0)
             {
-                dt = BorrowAdmin.Select(user.ID);
+                dt = BorrowAdmin.GetBorrow(user.ID);
                 dataGridView1.DataSource = dt;
             }
             else if(this.tabControl1.SelectedIndex == 1)
@@ -107,6 +91,8 @@ namespace Library_management_system
             {
                 BookTypeUpdate();
                 BookCatalogUpdate(treeView2);
+                Clear_4();
+                Clear_44();
             }
         }
 
@@ -204,10 +190,11 @@ namespace Library_management_system
                 return ;
             }
 
-            dt = BorrowAdmin.Select(ID);
+            dt = BorrowAdmin.GetBorrow(ID);
             int num = 0;
             for (int i = 0; i < dt.Rows.Count; i++ )
-                if (Convert.ToInt32(dt.Rows[i][7]) == 0)
+                //if (Convert.ToInt32(dt.Rows[i][7]) == 0)
+                if (dt.Rows[i][7].ToString() == "False")
                     num++;
             if (num != 0)
             {
@@ -219,6 +206,8 @@ namespace Library_management_system
             borrowBLL.Delete(new_borrow);
             userBLL.Delete(new_user);
             MessageBox.Show("状态：注销成功！");
+            tb5_6.Text = "";
+            tb5_7.Text = "";
             if (ID == user.ID)
             {
                 Login form = new Login();
@@ -304,7 +293,7 @@ namespace Library_management_system
             }
             if (SetTextToBookType())
             {
-                booktypeBLL.Update(new_booktype);
+                booktypeBLL.Updata(new_booktype);
                 MessageBox.Show("状态：更新成功！");
                 Clear_44();
             }
@@ -390,7 +379,12 @@ namespace Library_management_system
         {
             if (SetTextToBook())
             {
-                bookBLL.Update(new_book);
+                new_borrow.BID = new_book.ID;
+                new_borrow.BName = new_book.Name;
+                new_borrow.UName = "";
+                borrowBLL.UpdataBook(new_borrow);
+
+                bookBLL.Updata(new_book);
                 MessageBox.Show("状态：更改成功！");
             }
             BookCatalogUpdate(treeView2);
@@ -401,6 +395,20 @@ namespace Library_management_system
         {
             if (SetTextToBook())
             {
+                dt = BorrowAdmin.GetBorrow();
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    if (dt.Rows[i][7].ToString() == "False" && dt.Rows[i][4].ToString() == new_book.Name)
+                    {
+                        MessageBox.Show("该书未被归还");
+                        return;
+                    }
+                }
+                new_borrow.BID = new_book.ID;
+                new_borrow.BName = "";
+                new_borrow.UName = "";
+                borrowBLL.DeleteBook(new_borrow);
+
                 bookBLL.Delete(new_book);
                 MessageBox.Show("状态：删除成功！");
             }
@@ -476,7 +484,7 @@ namespace Library_management_system
                     lab2_4.Text = dt.Rows[i][3].ToString();
                     lab2_5.Text = dt.Rows[i][4].ToString();
                     lab2_6.Text = dt.Rows[i][5].ToString();
-                    lab2_7.Text = dt.Rows[i][6].ToString();
+                    lab2_7.Text = dt.Rows[i][7].ToString();
                     ID = dt.Rows[i][2].ToString();
                 }
             }
@@ -537,10 +545,11 @@ namespace Library_management_system
                 MessageBox.Show("该用户不存在");
                 return;
             }
-            dt = BorrowAdmin.Select(Convert.ToInt32(tb3_2.Text));
+            dt = BorrowAdmin.GetBorrow(Convert.ToInt32(tb3_2.Text));
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-                if (Convert.ToInt32(dt.Rows[i][7]) == 0)
+                //if (Convert.ToInt32(dt.Rows[i][7]) == 0)
+                if (dt.Rows[i][7].ToString() == "False")
                     listBox1.Items.Add(dt.Rows[i][4]);
             }
         }
@@ -549,7 +558,7 @@ namespace Library_management_system
         {
             if (listBox1.SelectedItems.Count == 0)
             {
-                MessageBox.Show("请续借注销项");
+                MessageBox.Show("请选择注销项");
                 return;
             }
             if (SetTextToBorrow())
@@ -568,16 +577,33 @@ namespace Library_management_system
                 return;
             }
 
-            new_book = BookAdmin.GetBook(Convert.ToInt32(tb3_2.Text));
-            if(new_book == null)
+            new_book = BookAdmin.GetBook(Convert.ToInt32(tb3_3.Text));
+            if(new_book.Name == null)
             {
                 MessageBox.Show("该图书不存在");
                 return;
             }
 
+            dt = BorrowAdmin.GetBorrow(Convert.ToInt32(tb3_2.Text));
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                //if (dt.Rows[i][4].ToString() == listBox1.SelectedItems[0].ToString() && Convert.ToInt32(dt.Rows[i][7]) == 0)
+                if (dt.Rows[i][3].ToString() == tb3_3.Text && dt.Rows[i][7].ToString() == "False")
+                {
+                    MessageBox.Show("该图书已借出");
+                    return;
+                }
+            }
+            
             if (SetTextToBorrow())
             {
                 borrowBLL.Insert(new_borrow);
+                new_book = BookAdmin.GetBook(new_book.ID);
+
+                new_book = BookAdmin.GetBook(new_book.ID);
+                new_book.Condition = "True";
+                bookBLL.Updata(new_book);
+
                 MessageBox.Show("状态：登记成功！");
             }
             tb3_3.Text = "";
@@ -595,6 +621,7 @@ namespace Library_management_system
                 borrowBLL.Updata(new_borrow);
                 MessageBox.Show("状态：注销成功！");
             }
+            listBox1.Items.Clear();
         }
 
         private bool SetTextToBorrow()
@@ -619,10 +646,11 @@ namespace Library_management_system
             new_borrow.Return_time = DateTime.Now;
             if (listBox1.SelectedItems.Count != 0)
             {
-                dt = BorrowAdmin.Select(new_borrow.UID);
+                dt = BorrowAdmin.GetBorrow(new_borrow.UID);
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    if (dt.Rows[i][4].ToString() == listBox1.SelectedItems[0].ToString() && Convert.ToInt32(dt.Rows[i][7]) == 0)
+                    //if (dt.Rows[i][4].ToString() == listBox1.SelectedItems[0].ToString() && Convert.ToInt32(dt.Rows[i][7]) == 0)
+                    if (dt.Rows[i][4].ToString() == listBox1.SelectedItems[0].ToString() && dt.Rows[i][7].ToString() == "False")
                     {
                         if (tb3_3.Text == "")
                         {

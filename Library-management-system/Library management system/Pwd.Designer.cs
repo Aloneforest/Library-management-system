@@ -39,7 +39,7 @@
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(154, 177);
+            this.btnConfirm.Location = new System.Drawing.Point(153, 186);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(75, 30);
             this.btnConfirm.TabIndex = 12;
@@ -113,7 +113,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtOldPwd);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Pwd";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "修改密码";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -15,3 +15,5 @@ C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management sy
 C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\Library management system\bin\Debug\DAL_Library management system.pdb
 C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\Library management system\bin\Debug\Model_Library management system.pdb
 C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\Library management system\obj\Debug\Library_management_system.Pwd.resources
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\Library management system\bin\Debug\commom.dll
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\Library management system\bin\Debug\commom.pdb
