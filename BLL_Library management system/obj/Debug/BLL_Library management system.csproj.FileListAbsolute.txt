@@ -1,0 +1,11 @@
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\BLL_Library management system\obj\Debug\BLL_Library management system.csprojResolveAssemblyReference.cache
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\BLL_Library management system\bin\Debug\BLL_Library management system.dll
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\BLL_Library management system\bin\Debug\BLL_Library management system.pdb
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\BLL_Library management system\bin\Debug\DAL_Library management system.dll
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\BLL_Library management system\bin\Debug\Model_Library management system.dll
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\BLL_Library management system\bin\Debug\DAL_Library management system.pdb
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\BLL_Library management system\bin\Debug\Model_Library management system.pdb
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\BLL_Library management system\obj\Debug\BLL_Library management system.dll
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\BLL_Library management system\obj\Debug\BLL_Library management system.pdb
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\BLL_Library management system\bin\Debug\commom.dll
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\BLL_Library management system\bin\Debug\commom.pdb

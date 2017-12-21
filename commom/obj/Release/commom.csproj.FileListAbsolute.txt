@@ -1,0 +1,5 @@
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication1\超市管理系统-软件工程-设计\commom\bin\Release\commom.dll
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication1\超市管理系统-软件工程-设计\commom\bin\Release\commom.pdb
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication1\超市管理系统-软件工程-设计\commom\obj\Release\commom.csprojResolveAssemblyReference.cache
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication1\超市管理系统-软件工程-设计\commom\obj\Release\commom.dll
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication1\超市管理系统-软件工程-设计\commom\obj\Release\commom.pdb

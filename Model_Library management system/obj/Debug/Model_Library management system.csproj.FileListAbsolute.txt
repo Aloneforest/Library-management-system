@@ -1,0 +1,5 @@
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\Model_Library management system\bin\Debug\Model_Library management system.dll
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\Model_Library management system\bin\Debug\Model_Library management system.pdb
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\Model_Library management system\obj\Debug\Model_Library management system.csprojResolveAssemblyReference.cache
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\Model_Library management system\obj\Debug\Model_Library management system.dll
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\Model_Library management system\obj\Debug\Model_Library management system.pdb

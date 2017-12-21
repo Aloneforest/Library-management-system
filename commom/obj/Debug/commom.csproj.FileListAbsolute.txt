@@ -1,0 +1,15 @@
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication1\超市管理系统-软件工程-设计\commom\bin\Debug\commom.dll
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication1\超市管理系统-软件工程-设计\commom\bin\Debug\commom.pdb
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication1\超市管理系统-软件工程-设计\commom\obj\Debug\commom.dll
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication1\超市管理系统-软件工程-设计\commom\obj\Debug\commom.pdb
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication1\超市管理系统-软件工程-设计\commom\obj\Debug\commom.csprojResolveAssemblyReference.cache
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication1\Takeaway system\commom\bin\Debug\commom.dll
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication1\Takeaway system\commom\bin\Debug\commom.pdb
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication1\Takeaway system\commom\obj\Debug\commom.csprojResolveAssemblyReference.cache
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication1\Takeaway system\commom\obj\Debug\commom.dll
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication1\Takeaway system\commom\obj\Debug\commom.pdb
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\commom\bin\Debug\commom.dll
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\commom\bin\Debug\commom.pdb
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\commom\obj\Debug\commom.csprojResolveAssemblyReference.cache
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\commom\obj\Debug\commom.dll
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\commom\obj\Debug\commom.pdb
