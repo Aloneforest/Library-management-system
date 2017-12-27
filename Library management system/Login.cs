@@ -9,15 +9,23 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Model_Library_management_system;
 using BLL_Library_management_system;
+using LayeredSkin.Forms;
 
 namespace Library_management_system
 {
-    public partial class Login : Form
+    public partial class Login : LayeredForm
     {
         public Main main = null;
+        public bool blCanLogin = false;
 
         private UserAdmin userBLL = new UserAdmin();
         public static User user = null;
+
+        Image Cloud = Image.FromFile("Images\\cloud.png");
+        float cloudX = 0;
+        Image yezi;
+        float angle = 10;
+        bool RotationDirection = true;//是否为顺时针
 
         public Login()
         {
@@ -27,6 +35,16 @@ namespace Library_management_system
         private void btnLogin_Click(object sender, EventArgs e)
         {
             int ID;
+            if (txtUserID.Text == "")
+            {
+                MessageBox.Show("请输入账号");
+                return;
+            }
+            if (txtUserPwd.Text == "")
+            {
+                MessageBox.Show("请输入密码");
+                return;
+            }
             ID = Convert.ToInt32(txtUserID.Text.Trim());
             user = UserAdmin.GetUser(ID);
 
@@ -39,7 +57,8 @@ namespace Library_management_system
             {
                 if (user.Pwd == txtUserPwd.Text)
                 {
-                    this.DialogResult = DialogResult.OK;//登录成功
+                    blCanLogin = true;
+                    //this.DialogResult = DialogResult.OK;
                     if (main != null)
                     {
                         main.user = user;
@@ -55,26 +74,75 @@ namespace Library_management_system
                     MessageBox.Show("信息：密码错误！");
                 }
             }
-
-            //使用下面方法会导致数据库注入登录，不安全
-            //SqlConnection conn = new SqlConnection("server=.; database=bookLibrary; integrated security=true");
-            //conn.Open();
-            //SqlCommand cmd = conn.CreateCommand();
-            //cmd.CommandText = string.Format("select count(*) from user where rdid={0} and rdPwd='{1}'", txtUserID.Text, txtUserPwd.Text);
-            //int count = Convert.ToInt32(cmd.ExecuteScalar());
-            //if (count == 0)
-            //{
-            //    MessageBox.Show("用户登录失败！");
-            //}
-            //else
-            //{
-            //    MessageBox.Show("嘿嘿，登录成功！");
-            //}
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void btnGuanBi_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnZuiXiao_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void FormMoveMouseDown(object sender, MouseEventArgs e)
+        {
+            LayeredSkin.NativeMethods.MouseToMoveControl(this.Handle);
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            this.Animation.Effect = new LayeredSkin.Animations.GradualCurtainEffect() { ChangeHeight = 25 };
+
+            yezi = new Bitmap(90, 80);//先把叶子画在稍微大一点txtUserPwd画布上，这样叶子旋转txtUserPwd时候才不会被裁掉一部分
+            using (Graphics g = Graphics.FromImage(yezi))
+            {
+                g.DrawImage(Image.FromFile("Images\\yezi3.png"), 10, 0);
+            }
+            timer.Start();
+        }
+
+        protected override void OnLayeredPaint(PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            if (cloudX > this.Width - Cloud.Width)
+            {//云的飘动
+                cloudX = 0;
+            }
+            else
+            {
+                cloudX += 0.5f;
+            }
+            g.DrawImage(Cloud, cloudX, 0);//把云绘制上去
+
+            if (angle > 10)
+            {//控制旋转方向
+                RotationDirection = false;
+            }
+            if (angle < -10)
+            {
+                RotationDirection = true;
+            }
+            if (RotationDirection)
+            {
+                angle += 1;
+            }
+            else
+            {
+                angle -= 1;
+            }
+            using (Image temp = LayeredSkin.ImageEffects.RotateImage(yezi, angle, new Point(25, 3)))
+            {
+                g.DrawImage(temp, 140, 70);//绘制叶子
+            }
+            base.OnLayeredPaint(e);
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            LayeredPaint();
+            GC.Collect();
         }
     }
 }

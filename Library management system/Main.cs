@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Model_Library_management_system;
 using BLL_Library_management_system;
+using LayeredSkin.Forms;
+using LayeredSkin.DirectUI;
 
 namespace Library_management_system
 {
@@ -292,10 +294,7 @@ namespace Library_management_system
             new_user.CertType = cb5_2.Text;
             new_user.Cert = tb5_2.Text;
             new_user.Phone = tb5_3.Text;
-            if (cb5_3.Text == "管理员")
-                new_user.Type = 0;
-            else
-                new_user.Type = 1;
+            new_user.Type = cb5_3.Text;
             return true;
         }
         #endregion
@@ -334,6 +333,11 @@ namespace Library_management_system
                 MessageBox.Show("请输入完整信息");
                 return;
             }
+            if (tb4_1.Text == "无类型")
+            {
+                MessageBox.Show("不可修改");
+                return;
+            }
             if (SetTextToBookType())
             {
                 booktypeBLL.Updata(new_booktype);
@@ -346,6 +350,11 @@ namespace Library_management_system
 
         private void 删除图书类型_4_Click(object sender, EventArgs e)
         {
+            if (tb4_1.Text == "无类型")
+            {
+                MessageBox.Show("不可删除");
+                return;
+            }
             if (SetTextToBookType())
             {
                 booktypeBLL.Delete(new_booktype);
@@ -422,11 +431,6 @@ namespace Library_management_system
         {
             if (SetTextToBook())
             {
-                new_borrow.BID = new_book.ID;
-                new_borrow.BName = new_book.Name;
-                new_borrow.UName = "";
-                borrowBLL.UpdataBook(new_borrow);
-
                 bookBLL.Updata(new_book);
                 MessageBox.Show("状态：更改成功！");
             }
@@ -438,19 +442,15 @@ namespace Library_management_system
         {
             if (SetTextToBook())
             {
-                dt = BorrowAdmin.GetBorrow();
+                dt = BookAdmin.GetBook();
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    if (dt.Rows[i][7].ToString() == "False" && dt.Rows[i][4].ToString() == new_book.Name)
+                    if (dt.Rows[i][7].ToString() == "借出" && dt.Rows[i][1].ToString() == tb4_3.Text)
                     {
                         MessageBox.Show("该书未被归还");
                         return;
                     }
                 }
-                new_borrow.BID = new_book.ID;
-                new_borrow.BName = "";
-                new_borrow.UName = "";
-                borrowBLL.DeleteBook(new_borrow);
 
                 bookBLL.Delete(new_book);
                 MessageBox.Show("状态：删除成功！");
@@ -592,8 +592,12 @@ namespace Library_management_system
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 //if (Convert.ToInt32(dt.Rows[i][7]) == 0)
-                if (dt.Rows[i][7].ToString() == "False")
-                    listBox1.Items.Add(dt.Rows[i][4]);
+                if (dt.Rows[i][5].ToString() == "NO")
+                {
+                    int x = int.Parse(dt.Rows[i][2].ToString());
+                    new_book = BookAdmin.GetBook(x);
+                    listBox1.Items.Add(new_book.Name);
+                }
             }
         }
 
@@ -620,6 +624,13 @@ namespace Library_management_system
                 return;
             }
 
+            new_user = UserAdmin.GetUser(Convert.ToInt32(tb3_2.Text));
+            if (new_user == null)
+            {
+                MessageBox.Show("该用户不存在");
+                return;
+            }
+
             new_book = BookAdmin.GetBook(Convert.ToInt32(tb3_3.Text));
             if(new_book.Name == null)
             {
@@ -642,9 +653,7 @@ namespace Library_management_system
             {
                 borrowBLL.Insert(new_borrow);
                 new_book = BookAdmin.GetBook(new_book.ID);
-
-                new_book = BookAdmin.GetBook(new_book.ID);
-                new_book.Condition = "True";
+                new_book.Condition = "借出";
                 bookBLL.Updata(new_book);
 
                 MessageBox.Show("状态：登记成功！");
@@ -662,6 +671,9 @@ namespace Library_management_system
             if (SetTextToBorrow())
             {
                 borrowBLL.Updata(new_borrow);
+                new_book = BookAdmin.GetBook(new_borrow.BID);
+                new_book.Condition = "在馆";
+                bookBLL.Updata(new_book);
                 MessageBox.Show("状态：注销成功！");
             }
             listBox1.Items.Clear();
@@ -676,13 +688,12 @@ namespace Library_management_system
             }
             new_borrow.UID = Convert.ToInt32(tb3_2.Text);
             new_user = UserAdmin.GetUser(new_borrow.UID);
-            new_borrow.UName = new_user.Name;
 
             if (tb3_3.Text != "")
             {
                 new_borrow.BID = Convert.ToInt32(tb3_3.Text);
                 new_book = BookAdmin.GetBook(new_borrow.BID);
-                new_borrow.BName = new_book.Name;
+                new_borrow.Is_return = "NO";
             }
 
             new_borrow.Borrow_time = DateTime.Now;
@@ -692,16 +703,15 @@ namespace Library_management_system
                 dt = BorrowAdmin.GetBorrow(new_borrow.UID);
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    //if (dt.Rows[i][4].ToString() == listBox1.SelectedItems[0].ToString() && Convert.ToInt32(dt.Rows[i][7]) == 0)
-                    if (dt.Rows[i][4].ToString() == listBox1.SelectedItems[0].ToString() && dt.Rows[i][7].ToString() == "False")
+                    string bname = BookAdmin.GetBook(int.Parse(dt.Rows[i][2].ToString())).Name;
+                    if (bname == listBox1.SelectedItems[0].ToString() && dt.Rows[i][5].ToString() == "NO")
                     {
                         if (tb3_3.Text == "")
                         {
-                            new_borrow.BID = Convert.ToInt32(dt.Rows[i][3].ToString());
-                            new_borrow.BName = listBox1.SelectedItems[0].ToString();
+                            new_borrow.BID = Convert.ToInt32(dt.Rows[i][2].ToString());
                         }
                         new_borrow.ID = Convert.ToInt32(dt.Rows[i][0].ToString());
-                        new_borrow.Is_return = 1;
+                        new_borrow.Is_return = "YES";
                         break;
                     }
                 }
@@ -709,6 +719,7 @@ namespace Library_management_system
             return true;
         }
         #endregion
+
 
     }
 }

@@ -65,7 +65,7 @@ namespace DAL_Library_management_system
         }
         #endregion
 
-        private static string _strConnection = @"Password=123456;Persist Security Info=True;User ID=sa;Initial Catalog=Library management system;Data Source=.";
+        private static string _strConnection = @"Password=123456;Persist Security Info=True;User ID=sa;Initial Catalog=Library_management_system;Data Source=.";
         //private static string _strConnection =File.ReadAllText(@"..\..\ConnectionString.txt");
         //public string strConnection
         //{

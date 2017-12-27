@@ -40,10 +40,6 @@ namespace BLL_Library_management_system
             if (json != "")
             {
                 dt = Common.JsonHelper.JsonToDataTable(json);
-                if (dt.Rows[0][7].ToString() == "True")
-                    dt.Rows[0][7] = "1";
-                else
-                    dt.Rows[0][7] = "0";
                 return SqlHelper.DataRowToT<User>(dt.Rows[0]); 
             }
             return null;

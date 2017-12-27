@@ -14,16 +14,11 @@ namespace DAL_Library_management_system
         public static int Insert(Borrow borrow)
         {
             int rows = 0;
-            string sql = "insert into tb_bookBorrow(UID,UName,BID,BName,Borrow_time) values(@UID,@UName,@BID,@BName,@Borrow_time)";
+            string sql = "insert into tb_bookBorrow(UID,BID,Borrow_time) values(@UID,@BID,@Borrow_time)";
             SqlParameter[] parameters ={
-                                           new SqlParameter("@ID",borrow.ID),
                                            new SqlParameter("@UID",borrow.UID),
-                                           new SqlParameter("@UName",borrow.UName),
                                            new SqlParameter("@BID",borrow.BID),
-                                           new SqlParameter("@BName",borrow.BName),
                                            new SqlParameter("@Borrow_time",borrow.Borrow_time),
-                                           new SqlParameter("@Return_time",borrow.Return_time),
-                                           new SqlParameter("@Is_return",borrow.Is_return),
                                       };
             try
             {
@@ -59,27 +54,6 @@ namespace DAL_Library_management_system
         }
         #endregion
 
-        #region 修改_书
-        public static int UpdateBook(Borrow borrow)
-        {
-            int rows = 0;
-            string sql = "update tb_bookBorrow set BName=@BName where BID=@BID";
-            SqlParameter[] parameters ={
-                                           new SqlParameter("@BID",borrow.BID),
-                                           new SqlParameter("@BName",borrow.BName),
-                                      };
-            try
-            {
-                rows = SqlHelper.ExecuteNonQuery(sql, parameters);
-            }
-            catch (SqlException ex)
-            {
-                throw new Exception(ex.Message);
-            }
-            return rows;
-        }
-        #endregion
-
         #region 删除
         public static int Delete(Borrow borrow)
         {
@@ -87,26 +61,6 @@ namespace DAL_Library_management_system
             string sql = "delete from tb_bookBorrow where UID = @UID";
             SqlParameter[] parameters ={
                                            new SqlParameter("@UID",borrow.UID),
-                                      };
-            try
-            {
-                rows = SqlHelper.ExecuteNonQuery(sql, parameters);
-            }
-            catch (SqlException ex)
-            {
-                throw new Exception(ex.Message);
-            }
-            return rows;
-        }
-        #endregion
-
-        #region 删除_书
-        public static int DeleteBook(Borrow borrow)
-        {
-            int rows = 0;
-            string sql = "delete from tb_bookBorrow where BID=@BID";
-            SqlParameter[] parameters ={
-                                           new SqlParameter("@BID",borrow.BID),
                                       };
             try
             {

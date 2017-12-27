@@ -10,10 +10,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Model_Library_management_system;
 using BLL_Library_management_system;
+using LayeredSkin.Forms;
 
 namespace Library_management_system
 {
-    public partial class Pwd : Form
+    public partial class Pwd : LayeredForm
     {
         public Main main = null;
 
@@ -23,6 +24,16 @@ namespace Library_management_system
         public Pwd()
         {
             InitializeComponent();
+        }
+
+        private void btnGuanBi_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnZuiXiao_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
@@ -63,7 +74,7 @@ namespace Library_management_system
             form.main = main;
             form.Show();
             this.Close();
-            user = null;
+            form.main.user = null;
         }
     }
 }

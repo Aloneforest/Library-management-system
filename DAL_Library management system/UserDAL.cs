@@ -15,7 +15,7 @@ namespace DAL_Library_management_system
         public static int Insert(User user)
         {
             int rows = 0;
-            string sql = @"insert into tb_user values (@Name,@Pwd,@Sex,@CertType,@Cert,@Phone,@Type)";
+            string sql = @"exec P_注册用户 @Name,@Pwd,@Sex,@CertType,@Cert,@Phone,@Type";
             SqlParameter[] parameters ={
                                            new SqlParameter("@Name",user.Name),
                                            new SqlParameter("@Pwd",user.Pwd),

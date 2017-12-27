@@ -60,7 +60,7 @@ namespace DAL_Library_management_system
         public static int Delete(BookType booktype)
         {
             int rows = 0;
-            string sql = "delete from tb_bookType where ID=@ID";
+            string sql = "exec P_删除图书类型 @ID";
             SqlParameter[] parameters = { new SqlParameter("@ID", booktype.ID) };
             try
             {

@@ -12,12 +12,10 @@ namespace Model_Library_management_system
         #region 公有变量
         public int ID { get; set; }
         public int UID { get; set; }
-        public string UName { get; set; }
         public int BID { get; set; }
-        public string BName { get; set; }
         public DateTime Borrow_time { get; set; }
         public DateTime Return_time { get; set; }
-        public byte Is_return { get; set; }
+        public string Is_return { get; set; }
         #endregion
 
         //添加复制函数
@@ -25,9 +23,7 @@ namespace Model_Library_management_system
         {
             this.ID = rt.ID;
             this.UID = rt.UID;
-            this.UName = rt.UName;
             this.BID = rt.BID;
-            this.BName = rt.BName;
             this.Borrow_time = rt.Borrow_time;
             this.Return_time = rt.Return_time;
             this.Is_return = rt.Is_return;

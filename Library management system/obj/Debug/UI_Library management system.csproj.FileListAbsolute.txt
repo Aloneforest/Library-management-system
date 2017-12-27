@@ -17,3 +17,41 @@ C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management sy
 C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\Library management system\obj\Debug\Library_management_system.Pwd.resources
 C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\Library management system\bin\Debug\commom.dll
 C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication3\Library management system\Library management system\bin\Debug\commom.pdb
+C:\Users\alone森林\Desktop\图书管理系统\Library management system\Library management system\bin\Debug\Library management system.exe.config
+C:\Users\alone森林\Desktop\图书管理系统\Library management system\Library management system\obj\Debug\Library management system.exe
+C:\Users\alone森林\Desktop\图书管理系统\Library management system\Library management system\obj\Debug\Library management system.pdb
+C:\Users\alone森林\Desktop\图书管理系统\Library management system\Library management system\bin\Debug\Library management system.exe
+C:\Users\alone森林\Desktop\图书管理系统\Library management system\Library management system\bin\Debug\Library management system.pdb
+C:\Users\alone森林\Desktop\图书管理系统\Library management system\Library management system\bin\Debug\BLL_Library management system.dll
+C:\Users\alone森林\Desktop\图书管理系统\Library management system\Library management system\bin\Debug\DAL_Library management system.dll
+C:\Users\alone森林\Desktop\图书管理系统\Library management system\Library management system\bin\Debug\Model_Library management system.dll
+C:\Users\alone森林\Desktop\图书管理系统\Library management system\Library management system\bin\Debug\BLL_Library management system.pdb
+C:\Users\alone森林\Desktop\图书管理系统\Library management system\Library management system\bin\Debug\DAL_Library management system.pdb
+C:\Users\alone森林\Desktop\图书管理系统\Library management system\Library management system\bin\Debug\Model_Library management system.pdb
+C:\Users\alone森林\Desktop\图书管理系统\Library management system\Library management system\obj\Debug\UI_Library management system.csprojResolveAssemblyReference.cache
+C:\Users\alone森林\Desktop\图书管理系统\Library management system\Library management system\obj\Debug\Library_management_system.Login.resources
+C:\Users\alone森林\Desktop\图书管理系统\Library management system\Library management system\obj\Debug\Library_management_system.Main.resources
+C:\Users\alone森林\Desktop\图书管理系统\Library management system\Library management system\obj\Debug\Library_management_system.Properties.Resources.resources
+C:\Users\alone森林\Desktop\图书管理系统\Library management system\Library management system\obj\Debug\Library_management_system.Pwd.resources
+C:\Users\alone森林\Desktop\图书管理系统\Library management system\Library management system\obj\Debug\UI_Library management system.csproj.GenerateResource.Cache
+C:\Users\alone森林\Desktop\图书管理系统\Library management system\Library management system\bin\Debug\commom.dll
+C:\Users\alone森林\Desktop\图书管理系统\Library management system\Library management system\bin\Debug\commom.pdb
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication4\Library management system\Library management system\bin\Debug\Library management system.exe.config
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication4\Library management system\Library management system\obj\Debug\Library management system.exe
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication4\Library management system\Library management system\obj\Debug\Library management system.pdb
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication4\Library management system\Library management system\bin\Debug\Library management system.exe
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication4\Library management system\Library management system\bin\Debug\Library management system.pdb
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication4\Library management system\Library management system\bin\Debug\BLL_Library management system.dll
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication4\Library management system\Library management system\bin\Debug\DAL_Library management system.dll
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication4\Library management system\Library management system\bin\Debug\Model_Library management system.dll
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication4\Library management system\Library management system\bin\Debug\commom.dll
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication4\Library management system\Library management system\bin\Debug\BLL_Library management system.pdb
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication4\Library management system\Library management system\bin\Debug\DAL_Library management system.pdb
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication4\Library management system\Library management system\bin\Debug\Model_Library management system.pdb
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication4\Library management system\Library management system\bin\Debug\commom.pdb
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication4\Library management system\Library management system\obj\Debug\UI_Library management system.csprojResolveAssemblyReference.cache
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication4\Library management system\Library management system\obj\Debug\Library_management_system.Login.resources
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication4\Library management system\Library management system\obj\Debug\Library_management_system.Main.resources
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication4\Library management system\Library management system\obj\Debug\Library_management_system.Properties.Resources.resources
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication4\Library management system\Library management system\obj\Debug\Library_management_system.Pwd.resources
+C:\Users\alone森林\Desktop\通用\c#\ConsoleApplication4\Library management system\Library management system\obj\Debug\UI_Library management system.csproj.GenerateResource.Cache

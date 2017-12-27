@@ -22,12 +22,10 @@ namespace Web_Library_management_system
             int flag = Convert.ToInt32(context.Request["flag"]);
             borrow.ID = Convert.ToInt32(context.Request["ID"]);
             borrow.UID = Convert.ToInt32(context.Request["UID"]);
-            borrow.UName = context.Request["UName"];
             borrow.BID = Convert.ToInt32(context.Request["BID"]);
-            borrow.BName = context.Request["BName"];
             borrow.Borrow_time = Convert.ToDateTime(context.Request["Borrow_time"]);
             borrow.Return_time = Convert.ToDateTime(context.Request["Return_time"]);
-            borrow.Is_return = Convert.ToByte(context.Request["Is_return"]);
+            borrow.Is_return = context.Request["Is_return"];
 
             if (flag == 0)
             {
@@ -59,16 +57,6 @@ namespace Web_Library_management_system
             {
                 int Delete = BorrowDAL.Delete(borrow);
                 context.Response.Write(Delete);
-            }
-            else if (flag == 5)
-            {
-                int UpdateBook = BorrowDAL.UpdateBook(borrow);
-                context.Response.Write(UpdateBook);
-            }
-            else if (flag == 6)
-            {
-                int DeleteBook = BorrowDAL.DeleteBook(borrow);
-                context.Response.Write(DeleteBook);
             }
         }
 

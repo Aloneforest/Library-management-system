@@ -35,7 +35,7 @@ namespace BLL_Library_management_system
 
         public static DataTable GetBorrow(int UID)
         {
-            //return (BorrowDAL.GetBorrow(UID));
+            //return (BorrowDAL.Select(UID));
             handlerurl =
                 url + "BorrowHandler.ashx?flag=1&UID=@UID";
 
@@ -62,7 +62,7 @@ namespace BLL_Library_management_system
 
         public int Updata(Borrow borrow)
         {
-            //return (BorrowDAL.Updata(borrow));
+            //return (BorrowDAL.Update(borrow));
             ChangeString(borrow, 3);
             json = HttpHelper.Get(handlerurl);
             return Convert.ToInt32(json);
@@ -72,22 +72,6 @@ namespace BLL_Library_management_system
         {
             //return (BorrowDAL.Delete(borrow));
             ChangeString(borrow, 4);
-            json = HttpHelper.Get(handlerurl);
-            return Convert.ToInt32(json);
-        }
-
-        public int UpdataBook(Borrow borrow)
-        {
-            //return (BorrowDAL.Updata(borrow));
-            ChangeString(borrow, 5);
-            json = HttpHelper.Get(handlerurl);
-            return Convert.ToInt32(json);
-        }
-
-        public int DeleteBook(Borrow borrow)
-        {
-            //return (BorrowDAL.Delete(borrow));
-            ChangeString(borrow, 6);
             json = HttpHelper.Get(handlerurl);
             return Convert.ToInt32(json);
         }
@@ -107,9 +91,7 @@ namespace BLL_Library_management_system
             handlerurl = handlerurl.Replace("@flag", flag.ToString());
             handlerurl = handlerurl.Replace("@ID", borrow.ID.ToString());
             handlerurl = handlerurl.Replace("@UID", borrow.UID.ToString());
-            handlerurl = handlerurl.Replace("@UName", borrow.UName.ToString());
             handlerurl = handlerurl.Replace("@BID", borrow.BID.ToString());
-            handlerurl = handlerurl.Replace("@BName", borrow.BName.ToString());
             handlerurl = handlerurl.Replace("@Borrow_time", borrow.Borrow_time.ToString());
             handlerurl = handlerurl.Replace("@Return_time", borrow.Return_time.ToString());
             handlerurl = handlerurl.Replace("@Is_return", borrow.Is_return.ToString());

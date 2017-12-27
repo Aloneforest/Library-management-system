@@ -67,7 +67,7 @@ namespace DAL_Library_management_system
         public static int Delete(Book book)
         {
             int rows = 0;
-            string sql = "delete from tb_book where ID=@ID";
+            string sql = "delete from tb_book where ID=@ID and Condition='在馆'";
             SqlParameter[] parameters = { new SqlParameter("@ID", book.ID) };
             try
             {

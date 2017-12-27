@@ -17,7 +17,7 @@ namespace Model_Library_management_system
         public string CertType { get; set; }
         public string Cert { get; set; }
         public string Phone { get; set; }
-        public byte Type { get; set; }
+        public string Type { get; set; }
         public Byte[ ] Photo { get; set; }
         #endregion
 
@@ -37,11 +37,11 @@ namespace Model_Library_management_system
         #region 权限设置
         public bool IsAdmin()
         {
-            return (Type == 0);
+            return (Type == "管理员");
         }
         public bool IsReader()
         {
-            return (Type != 0);
+            return (Type != "管理员");
         }
         #endregion
 

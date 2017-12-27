@@ -28,7 +28,7 @@ namespace Web_Library_management_system
             user.CertType = context.Request["CertType"];
             user.Cert = context.Request["Cert"];
             user.Phone = context.Request["Phone"];
-            user.Type = Convert.ToByte(context.Request["Type"]);
+            user.Type = context.Request["Type"];
 
             if(flag == 0)
             {
